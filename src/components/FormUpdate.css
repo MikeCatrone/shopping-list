@@ -1,5 +1,6 @@
 
 
+
 .formUpdate {
     padding: 3em;
     background-color:#DAC0A3;
@@ -11,7 +12,9 @@
 
 input {
     padding: 0.5em;
+    
 }
+
 
 .theInputs {
     display: flex;
@@ -47,5 +50,18 @@ input {
 
     .quantity {
         margin-left: 2.4em;
+    
     }
+}
+
+@media (max-width: 350px) {
+
+    input {
+        width:50%;
+    }
+
+    .quantity {
+        margin-right: 0.3em;
+    }
+   
 }
