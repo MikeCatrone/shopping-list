@@ -41,7 +41,12 @@ input {
     
     .theInputs {
         width:100%;
-        display: block;   
+        display: block;
+          
+    }
+
+    input {
+        width: 7em;
     }
 
     .product {
@@ -49,19 +54,37 @@ input {
     }
 
     .quantity {
-        margin-left: 2.4em;
+        margin-left: 1em;
     
     }
 }
 
-@media (max-width: 350px) {
+
+
+@media (max-width: 495px) {
 
     input {
-        width:50%;
+        width: 10em;
     }
 
     .quantity {
-        margin-right: 0.3em;
+        margin:0;
     }
-   
+
+    .prodLabel {
+        margin-right: 0.6em;
+    }
+
+}
+
+@media (max-width: 435px) {
+
+    .nameInput {
+        display: block;
+    }
+
+    .quantInput {
+        display: block;
+    }
+
 }
