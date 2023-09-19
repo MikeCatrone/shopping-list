@@ -2,10 +2,8 @@
 import "./FormUpdate.css";
 
 
-
 const FormUpdate = ({theState}) => {
    
-  
     const changeHandler = (eve) => {
         
         // setState() for input text values
@@ -54,11 +52,17 @@ const FormUpdate = ({theState}) => {
         <div className="formUpdate">
 
             <span className="theInputs">
-                <label htmlFor="theProduct">Product Name </label>
-                <input className="product" onChange={changeHandler} type="text" placeholder='Enter Product' id="theProduct" name="productName" value={theState[0].productName}></input>
 
-                <label className="quantity" htmlFor="theQuantity">Quantity </label>
-                <input onChange={changeHandler}  type="number" placeholder='Enter Quantity' id="theQuantity" name="quantity" value={theState[0].quantity}></input>
+                <span class="nameInput">
+                    <label className="prodLabel" htmlFor="theProduct">Product</label>
+                    <input className="product" onChange={changeHandler} type="text" placeholder='Enter Product' id="theProduct" name="productName" value={theState[0].productName}></input>
+                </span>
+
+                <span className="quantInput">
+                    <label className="quantity" htmlFor="theQuantity">Quantity </label>
+                    <input onChange={changeHandler}  type="number" placeholder='Enter Quantity' id="theQuantity" name="quantity" value={theState[0].quantity}></input>
+                </span>
+                
             </span>
 
             <button onClick={buttonHandle} className="addButton">Add Item</button>
