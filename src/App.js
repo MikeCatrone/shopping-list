@@ -1,8 +1,6 @@
 
 import './App.css'
-
 import FormHome from './components/FormHome';
-
 
 
 //////////////////////////////////
@@ -12,10 +10,8 @@ import FormHome from './components/FormHome';
 /////////////////////////////
 
 
-
 function App() {
 
-  
   return (
 
     <div className="container">
