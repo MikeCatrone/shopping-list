@@ -1,0 +1,61 @@
+
+.listContainer {
+    padding: 3em;
+    background-color:#DAC0A3;
+    width: 40em;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+}
+
+.listContainer h2 {
+    text-decoration: underline;
+}
+
+ul {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    
+}
+
+li {
+    font-size: 1.3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.3em;
+    width:85%;
+    
+}
+
+
+h1 {
+    color: #ebae68;
+}
+
+
+
+@media (max-width: 600px) {
+    
+    .listContainer {
+        padding: 1.5em;
+        background-color:#DAC0A3;
+        width: 85%;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5em;
+        position: relative;
+    }
+
+    ul {
+        width:100%;
+    }
+    
+    li {
+        width: 85%;
+    }
+
+}
