@@ -47,13 +47,16 @@ const FormUpdate = ({theState}) => {
 
 
 
+
+
+
     return (
 
         <div className="formUpdate">
 
             <span className="theInputs">
 
-                <span class="nameInput">
+                <span className="nameInput">
                     <label className="prodLabel" htmlFor="theProduct">Product</label>
                     <input className="product" onChange={changeHandler} type="text" placeholder='Enter Product' id="theProduct" name="productName" value={theState[0].productName}></input>
                 </span>
