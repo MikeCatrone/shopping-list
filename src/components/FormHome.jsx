@@ -1,4 +1,5 @@
 
+
 import { useState } from "react";
 import "./FormHome.css";
 import FormUpdate from "./FormUpdate";
@@ -38,7 +39,7 @@ const FormHome = () => {
         <div className="listContainer">
             <h2>Current Shopping List</h2>
 
-            <ul>
+            <ul class="ul-container">
               {state2.length !== 0 ? state2.map((cur) => <li onClick={() => liHandler(cur.key)} key={cur.key}>{cur.productName} : {cur.quantity} </li>) : null}   
             </ul>
 
