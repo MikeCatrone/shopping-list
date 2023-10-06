@@ -1,6 +1,6 @@
 
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./FormHome.css";
 import FormUpdate from "./FormUpdate";
 
@@ -16,9 +16,18 @@ const FormHome = () => {
     })
 
 
-    // Array to hold a list of items
-    let [state2, setState2] = useState([]);
 
+    // Array to hold a list of items
+    let dataParse = JSON.parse(localStorage.getItem('theList'));
+    let [state2, setState2] = useState( dataParse ? dataParse : [] );
+
+
+
+    useEffect(() => {
+       localStorage.setItem('theList', JSON.stringify(state2));
+       
+
+    }, [state2])
 
 
     // When an li is clicked
@@ -39,7 +48,7 @@ const FormHome = () => {
         <div className="listContainer">
             <h2>Current Shopping List</h2>
 
-            <ul class="ul-container">
+            <ul className="ul-container">
               {state2.length !== 0 ? state2.map((cur) => <li onClick={() => liHandler(cur.key)} key={cur.key}>{cur.productName} : {cur.quantity} </li>) : null}   
             </ul>
 
