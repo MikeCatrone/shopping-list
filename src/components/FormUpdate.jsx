@@ -1,9 +1,11 @@
 
+
 import "./FormUpdate.css";
 
 
 const FormUpdate = ({theState}) => {
-   
+
+
     const changeHandler = (eve) => {
         
         // setState() for input text values
@@ -18,36 +20,48 @@ const FormUpdate = ({theState}) => {
 
     const buttonHandle = () => {
 
-        // adds a simple key value to an item
-        theState[1]((prev) => {
+        console.log(theState[0]);
 
-            let copy = {...prev};
-            copy.key++;
+         // checks if input fields are empty
+        if (theState[0].productName !== '' && theState[0].quantity !== '') {
 
-            return copy;
+            // adds a simple key value to an item
+            theState[1]((prev) => {
+
+                let copy = {...prev};
+                copy.key++;
+
+                return copy;
         })
         
 
-        // adds an item to an array of items
-        theState[3]((prev) => {
+            // adds an item to an array of items
+            theState[3]((prev) => {
 
-            let copy = [...prev];
-            copy.push(theState[0]);
+                let copy = [...prev];
+                copy.push(theState[0]);
 
-            return copy;
+                return copy;
         })
 
         
-        // resets the inputs on every button click
-        theState[1]((prev) => {
+            // resets the inputs on every button click
+            theState[1]((prev) => {
 
             return {...prev, productName: "", quantity: ""};
+
         })
+
+            
+
+        } else {
+            alert('Input fields cannot be empty');
+        }
+
+        
     }
 
-
-
-
+    
 
 
     return (
